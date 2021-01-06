@@ -1,0 +1,906 @@
+{
+	"info": {
+		"_postman_id": "fb2594d1-5ddf-48a4-8afc-f5bdd810bb73",
+		"name": "dvdrental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "actor",
+			"item": [
+				{
+					"name": "actor_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 201,\r\n    \"firstName\": \"Vitalii\",\r\n    \"lastName\": \"Kavun\",\r\n    \"lastUpdate\": \"2013-05-26T14:47:57.62\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/actor/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"actor",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actor_getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/actor/201",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"actor",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actor_count",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 201,\r\n    \"firstName\": \"Vitalii\",\r\n    \"lastName\": \"Kavun\",\r\n    \"lastUpdate\": \"2013-05-26T14:47:57.62\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/actor/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"actor",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actor_update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 201,\r\n    \"firstName\": \"Vitaliy\",\r\n    \"lastName\": \"Kavun\",\r\n    \"lastUpdate\": \"2013-05-26T14:47:57.62\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/actor/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"actor",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actor_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 201,\r\n    \"firstName\": \"Vitaliy\",\r\n    \"lastName\": \"Kavun\",\r\n    \"lastUpdate\": \"2013-05-26T14:47:57.62\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/actor/201",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"actor",
+								"201"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "address_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/address/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"address",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "address_count",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/address/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"address",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "address_getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/address/54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"address",
+								"54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "address_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressId\": 607,\r\n    \"address\": \"115 Hidalgo Parkway\",\r\n    \"address2\": \"\",\r\n    \"district\": \"Khartum\",\r\n    \"cityId\": 379,\r\n    \"postalCode\": \"80168\",\r\n    \"phone\": \"307703950263\",\r\n    \"location\": \"POINT(32.4777359 15.6445381)\",\r\n    \"lastUpdate\": \"2014-09-25T22:33:11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/address/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"address",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "address_update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressId\": 607,\r\n    \"address\": \"12364 Hidalgo Parkway\",\r\n    \"address2\": \"\",\r\n    \"district\": \"Khartum\",\r\n    \"cityId\": 379,\r\n    \"postalCode\": \"80168\",\r\n    \"phone\": \"307703950263\",\r\n    \"location\": \"POINT(32.4777359 15.6445381)\",\r\n    \"lastUpdate\": \"2014-09-25T22:33:11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/address/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"address",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "address_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/address/607",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"address",
+								"607"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "category_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/category/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"category",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category_count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/category/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"category",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category_getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/category/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"category",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\": 17,\r\n    \"name\": \"Classics agag\",\r\n    \"lastUpdate\": \"2006-02-15T04:46:27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/category/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"category",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category_count",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/category/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"category",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category_update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"categoryId\": 15,\r\n        \"name\": \"Sport22222\",\r\n        \"lastUpdate\": \"2006-02-15T04:46:27\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/category/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"category",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "city",
+			"item": [
+				{
+					"name": "city_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/city/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"city",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city_count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/city/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"city",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city_getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/city/500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"city",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cityId\": 603,\r\n    \"city\": \"Stockpoadsfasdfart\",\r\n    \"countryId\": 102,\r\n    \"lastUpdate\": \"2006-02-15T04:45:25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/city/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"city",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/city/602",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"city",
+								"602"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city_update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cityId\": 500,\r\n    \"city\": \"Stockport111111\",\r\n    \"countryId\": 102,\r\n    \"lastUpdate\": \"2006-02-15T04:45:25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/city/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"city",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "country",
+			"item": [
+				{
+					"name": "country_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/country/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"country",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "country_count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/country/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"country",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "country_getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/country/85",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"country",
+								"85"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "country_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"countryId\": 110,\r\n    \"country\": \"South Africa1111\",\r\n    \"lastUpdate\": \"2006-02-15T04:44:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/country/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"country",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "country_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/country/110",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"country",
+								"110"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "country_update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"countryId\": 85,\r\n    \"country\": \"South23423423\",\r\n    \"lastUpdate\": \"2006-02-15T04:44:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/country/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"country",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "customer_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/customer/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"customer",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer_count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/customer/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"customer",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer_getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/customer/85",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"customer",
+								"85"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 600,\r\n    \"storeId\": 2,\r\n    \"firstName\": \"ANNE\",\r\n    \"lastName\": \"POWELL\",\r\n    \"email\": \"ANNE.POWELL@sakilacustomer.org\",\r\n    \"addressId\": 89,\r\n    \"active\": 1,\r\n    \"createDate\": \"2006-02-14\",\r\n    \"lastUpdate\": \"2006-02-15T04:57:20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/customer/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"customer",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer_delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:{{port}}/customer/600",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"customer",
+								"600"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer_update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 600,\r\n    \"storeId\": 2,\r\n    \"firstName\": \"ANNE11111111\",\r\n    \"lastName\": \"POWELL\",\r\n    \"email\": \"ANNE.POWELL@sakilacustomer.org\",\r\n    \"addressId\": 89,\r\n    \"active\": 1,\r\n    \"createDate\": \"2006-02-14\",\r\n    \"lastUpdate\": \"2006-02-15T04:57:20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/customer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"customer",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:{{port}}/film/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:{{port}}/film/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"film",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "6060"
+		}
+	]
+}

@@ -9,7 +9,7 @@ public class Payment {
     private int customerId;
     private int staffId;
     private int rentalId;
-    private int amount;
+    private double amount;
     private Date paymentDate;
     private LocalDateTime lastUpdate;
 
@@ -55,11 +55,11 @@ public class Payment {
         this.rentalId = rentalId;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 

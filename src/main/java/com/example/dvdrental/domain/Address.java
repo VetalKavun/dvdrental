@@ -10,10 +10,10 @@ public class Address {
     private int cityId;
     private String postalCode;
     private String phone;
-    private String geometry;
+    private String location;
     private LocalDateTime lastUpdate;
 
-    public Address(int addressId, String address, String address2, String district, int cityId, String postalCode, String phone, String geometry, LocalDateTime lastUpdate) {
+    public Address(int addressId, String address, String address2, String district, int cityId, String postalCode, String phone, String location, LocalDateTime lastUpdate) {
         this.addressId = addressId;
         this.address = address;
         this.address2 = address2;
@@ -21,7 +21,7 @@ public class Address {
         this.cityId = cityId;
         this.postalCode = postalCode;
         this.phone = phone;
-        this.geometry = geometry;
+        this.location = location;
         this.lastUpdate = lastUpdate;
     }
 
@@ -81,12 +81,12 @@ public class Address {
         this.phone = phone;
     }
 
-    public String getGeometry() {
-        return geometry;
+    public String getLocation() {
+        return location;
     }
 
-    public void setGeometry(String geometry) {
-        this.geometry = geometry;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public LocalDateTime getLastUpdate() {
@@ -107,7 +107,7 @@ public class Address {
                 ", cityId=" + cityId +
                 ", postalCode='" + postalCode + '\'' +
                 ", phone='" + phone + '\'' +
-                ", geometry='" + geometry + '\'' +
+                ", geometry='" + location + '\'' +
                 ", lastUpdate=" + lastUpdate +
                 '}';
     }

@@ -1,1 +1,2 @@
 1) make a domain model for Film and Staff
+2) add id checking. need for searching before deletion

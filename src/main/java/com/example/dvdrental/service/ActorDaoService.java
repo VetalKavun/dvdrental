@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @PropertySource("classpath:${spring.profiles.active}-queries.properties")
-public class ActorDaoService {
+public class ActorDaoService implements DaoService<Actor>{
 
     private Environment environment;
     private JdbcTemplate jdbcTemplate;
@@ -20,40 +20,41 @@ public class ActorDaoService {
         this.environment = environment;
     }
 
-    public List<Actor> getAllActors() {
+    @Override
+    public List<Actor> getAll() {
         String query = environment.getProperty("get.all.actors");
-        return jdbcTemplate.query(query, (resultSet, rse) ->
+        return jdbcTemplate.query(query, (resultSet, rNum) ->
                 new Actor(resultSet.getInt("actor_id"), resultSet.getString("first_name"),
                         resultSet.getString("last_name"), resultSet.getTimestamp("last_update").toLocalDateTime()));
-
     }
 
-    public int countActors() {
+    @Override
+    public int count() {
         String query = "SELECT COUNT(*) FROM actor";
         return jdbcTemplate.queryForObject(query,Integer.class);
     }
 
-    public Actor getActorById(int id){
-        return jdbcTemplate.queryForObject("SELECT * FROM actor where actor_id = ?", (resultSet, rse) ->
+    @Override
+    public Actor getById(int id) {
+        return jdbcTemplate.queryForObject("SELECT * FROM actor where actor_id = ?", (resultSet, rNum) ->
                 new Actor(resultSet.getInt("actor_id"), resultSet.getString("first_name"),
                         resultSet.getString("last_name"), resultSet.getTimestamp("last_update").toLocalDateTime()), id);
     }
 
-    public int addActor(Actor actor){
+    @Override
+    public int add(Actor actor) {
         return jdbcTemplate.update("INSERT INTO actor VALUES (?, ?, ?, ?)",
                 actor.getId(), actor.getFirstName(), actor.getLastName(), actor.getLastUpdate());
     }
 
-    public int deleteActorById(int id){
+    @Override
+    public int deleteById(int id) {
         return jdbcTemplate.update("DELETE FROM actor WHERE actor_id = ?", id);
     }
 
-    public int updateActor(Actor actor){
-        Actor newActor = getActorById(actor.getId());
-        newActor.setFirstName(actor.getFirstName());
-        newActor.setLastName(actor.getLastName());
-        newActor.setLastUpdate(actor.getLastUpdate());
+    @Override
+    public int update(Actor actor) {
         return jdbcTemplate.update("UPDATE actor SET first_name = ?, last_name = ?, last_update = ? WHERE actor_id = ?",
-                newActor.getFirstName(), newActor.getLastName(), newActor.getLastUpdate(), newActor.getId());
+                actor.getFirstName(), actor.getLastName(), actor.getLastUpdate(), actor.getId());
     }
 }

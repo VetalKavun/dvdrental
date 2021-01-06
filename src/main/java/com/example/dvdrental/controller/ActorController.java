@@ -16,33 +16,33 @@ public class ActorController {
         this.actorDaoService = daoService;
     }
 
-    @GetMapping("actor_list")
+    @GetMapping("list")
     public List<Actor> getAllActors(){
-        return actorDaoService.getAllActors();
+        return actorDaoService.getAll();
     }
 
-    @GetMapping("count_actors")
+    @GetMapping("count")
     public int countActors(){
-        return actorDaoService.countActors();
+        return actorDaoService.count();
     }
 
-    @GetMapping("actor/{id}")
+    @GetMapping("/{id}")
     public Actor getActorById(@PathVariable("id") int id){
-        return actorDaoService.getActorById(id);
+        return actorDaoService.getById(id);
     }
 
     @PostMapping("add")
     public int addActor(@RequestBody Actor actor){
-        return actorDaoService.addActor(actor);
+        return actorDaoService.add(actor);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/{id}")
     public int deleteActor(@PathVariable("id") int id){
-        return actorDaoService.deleteActorById(id);
+        return actorDaoService.deleteById(id);
     }
 
     @PostMapping("update")
     public int updateActor(@RequestBody Actor actor){
-        return actorDaoService.updateActor(actor);
+        return actorDaoService.update(actor);
     }
 }

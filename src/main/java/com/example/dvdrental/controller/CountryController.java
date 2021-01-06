@@ -1,9 +1,7 @@
 package com.example.dvdrental.controller;
 
-import com.example.dvdrental.domain.City;
 import com.example.dvdrental.domain.Country;
 import com.example.dvdrental.service.DaoService;
-import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,11 +11,9 @@ import java.util.List;
 public class CountryController {
 
     private DaoService<Country> countryDaoService;
-    private Environment environment;
 
-    public CountryController(DaoService<Country> countryDaoService, Environment environment) {
+    public CountryController(DaoService<Country> countryDaoService) {
         this.countryDaoService = countryDaoService;
-        this.environment = environment;
     }
 
     @GetMapping("list")

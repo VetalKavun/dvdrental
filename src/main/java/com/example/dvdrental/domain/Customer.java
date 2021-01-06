@@ -11,11 +11,11 @@ public class Customer {
     private String lastName;
     private String email;
     private int addressId;
-    private boolean active;
+    private int active;
     private Date createDate;
     private LocalDateTime lastUpdate;
 
-    public Customer(int customerId, int storeId, String firstName, String lastName, String email, int addressId, boolean active, Date createDate, LocalDateTime lastUpdate) {
+    public Customer(int customerId, int storeId, String firstName, String lastName, String email, int addressId, int active, Date createDate, LocalDateTime lastUpdate) {
         this.customerId = customerId;
         this.storeId = storeId;
         this.firstName = firstName;
@@ -75,11 +75,11 @@ public class Customer {
         this.addressId = addressId;
     }
 
-    public boolean isActive() {
+    public int getActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(int active) {
         this.active = active;
     }
 

@@ -1,3 +1,3 @@
-1) make a domain model for Film and Staff
+1) make a domain model for Film and Staff - done
 2) add id checking. need for searching before deletion
-3) continue with Film class
+3) check issues with foreign key in Film class

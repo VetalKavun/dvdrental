@@ -2,9 +2,7 @@ package com.example.dvdrental.controller;
 
 import com.example.dvdrental.domain.Film;
 import com.example.dvdrental.service.DaoService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,8 +16,33 @@ public class FilmController {
         this.filmDaoService = filmDaoService;
     }
 
-    @GetMapping("/list")
+    @GetMapping("list")
     public List<Film> getAll(){
         return filmDaoService.getAll();
+    }
+
+    @GetMapping("count")
+    public int countActors(){
+        return filmDaoService.count();
+    }
+
+    @GetMapping("/{id}")
+    public Film getById(@PathVariable("id") int id){
+        return filmDaoService.getById(id);
+    }
+
+    @PostMapping("add")
+    public int add(@RequestBody Film film){
+        return filmDaoService.add(film);
+    }
+
+    @DeleteMapping("/{id}")
+    public int delete(@PathVariable("id") int id){
+        return filmDaoService.deleteById(id);
+    }
+
+    @PostMapping("update")
+    public int update(@RequestBody Film film){
+        return filmDaoService.update(film);
     }
 }

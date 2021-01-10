@@ -1,6 +1,7 @@
 package com.example.dvdrental.domain;
 
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 public class Film {
@@ -18,7 +19,9 @@ public class Film {
     private String rating;
     private String specialFeatures;
 
-    public Film(int filmID, String title, String description, String releaseYear, int languageId, int originalLanguageId, int rentalDuration, double rentalRate, int length, double replacementCost, String rating, String specialFeatures) {
+    private LocalDateTime lastUpdate;
+
+    public Film(int filmID, String title, String description, String releaseYear, int languageId, int originalLanguageId, int rentalDuration, double rentalRate, int length, double replacementCost, String rating, String specialFeatures, LocalDateTime lastUpdate) {
         this.filmID = filmID;
         this.title = title;
         this.description = description;
@@ -31,6 +34,7 @@ public class Film {
         this.replacementCost = replacementCost;
         this.rating = rating;
         this.specialFeatures = specialFeatures;
+        this.lastUpdate = lastUpdate;
     }
 
     public int getFilmID() {
@@ -127,6 +131,15 @@ public class Film {
 
     public void setSpecialFeatures(String specialFeatures) {
         this.specialFeatures = specialFeatures;
+    }
+
+
+    public LocalDateTime getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(LocalDateTime lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 
     @Override

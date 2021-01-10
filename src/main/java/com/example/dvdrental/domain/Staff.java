@@ -12,12 +12,12 @@ public class Staff {
     private Blob picture;
     private String email;
     private int storeId;
-    private boolean active;
+    private int active;
     private String userName;
     private String password;
     private LocalDateTime lastUpdate;
 
-    public Staff(int staffId, String firstName, String lastName, int addressId, Blob picture, String email, int storeId, boolean active, String userName, String password, LocalDateTime lastUpdate) {
+    public Staff(int staffId, String firstName, String lastName, int addressId, Blob picture, String email, int storeId, int active, String userName, String password, LocalDateTime lastUpdate) {
         this.staffId = staffId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -87,11 +87,11 @@ public class Staff {
         this.storeId = storeId;
     }
 
-    public boolean isActive() {
+    public int isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(int active) {
         this.active = active;
     }
 

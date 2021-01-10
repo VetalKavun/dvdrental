@@ -13,7 +13,7 @@ public class Payment {
     private Date paymentDate;
     private LocalDateTime lastUpdate;
 
-    public Payment(int paymentId, int customerId, int staffId, int rentalId, int amount, Date paymentDate, LocalDateTime lastUpdate) {
+    public Payment(int paymentId, int customerId, int staffId, int rentalId, double amount, Date paymentDate, LocalDateTime lastUpdate) {
         this.paymentId = paymentId;
         this.customerId = customerId;
         this.staffId = staffId;

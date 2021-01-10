@@ -1,3 +1,4 @@
 1) make a domain model for Film and Staff - done
 2) add id checking. need for searching before deletion
 3) check issues with foreign key in Film class
+4) fix Staff service with blob issue

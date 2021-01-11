@@ -9,7 +9,7 @@ public class Staff {
     private String firstName;
     private String lastName;
     private int addressId;
-    private Blob picture;
+    private byte[] picture;
     private String email;
     private int storeId;
     private int active;
@@ -17,7 +17,7 @@ public class Staff {
     private String password;
     private LocalDateTime lastUpdate;
 
-    public Staff(int staffId, String firstName, String lastName, int addressId, Blob picture, String email, int storeId, int active, String userName, String password, LocalDateTime lastUpdate) {
+    public Staff(int staffId, String firstName, String lastName, int addressId, byte[] picture, String email, int storeId, int active, String userName, String password, LocalDateTime lastUpdate) {
         this.staffId = staffId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -63,11 +63,11 @@ public class Staff {
         this.addressId = addressId;
     }
 
-    public Blob getPicture() {
+    public byte[] getPicture() {
         return picture;
     }
 
-    public void setPicture(Blob picture) {
+    public void setPicture(byte[] picture) {
         this.picture = picture;
     }
 

@@ -23,7 +23,7 @@ public class StaffDaoService implements DaoService<Staff>{
                         resultSet.getString("first_name"),
                         resultSet.getString("last_name"),
                         resultSet.getInt("address_id"),
-                        resultSet.getBlob("picture"),
+                        resultSet.getBytes("picture"),
                         resultSet.getString("email"),
                         resultSet.getInt("store_id"),
                         resultSet.getInt("active"),
@@ -46,7 +46,7 @@ public class StaffDaoService implements DaoService<Staff>{
                         resultSet.getString("first_name"),
                         resultSet.getString("last_name"),
                         resultSet.getInt("address_id"),
-                        resultSet.getBlob("picture"),
+                        resultSet.getBytes("picture"),
                         resultSet.getString("email"),
                         resultSet.getInt("store_id"),
                         resultSet.getInt("active"),
@@ -74,7 +74,7 @@ public class StaffDaoService implements DaoService<Staff>{
 
     @Override
     public int deleteById(int id) {
-        return jdbcTemplate.update("DELETE FROM staff", id);
+        return jdbcTemplate.update("DELETE FROM staff WHERE staff_id = ?", id);
     }
 
     @Override
